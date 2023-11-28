@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--
+    默認: 單例
+    scope: 設置bean 作用域
+    scope="singleton|prototype"
+    singleton: 表示獲取該bean所對應的對象都是同一個
+    prototype: 表示獲取該bean所對應的對象都不是同一個
+-->
+    <bean id="studentZero" class="com.example.spring.pojo.Student">
+        <property name="sid" value="1001"></property>
+        <property name="sname" value="張三"></property>
+    </bean>
+
+    <bean id="studentOne" class="com.example.spring.pojo.Student" scope="singleton">
+        <property name="sid" value="1001"></property>
+        <property name="sname" value="張三"></property>
+    </bean>
+
+    <bean id="studentTwo" class="com.example.spring.pojo.Student" scope="prototype">
+        <property name="sid" value="1001"></property>
+        <property name="sname" value="張三"></property>
+    </bean>
+</beans>

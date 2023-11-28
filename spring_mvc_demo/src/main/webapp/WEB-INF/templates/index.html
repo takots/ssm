@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Example</title>
+</head>
+<body>
+<h1>index.html</h1>
+<a th:href="@{/hello}">hello1</a><br>
+<a th:href="@{/abc}">  hello2 - value屬性</a><br>
+<form th:action="@{/hello}" method="post">
+    <input type="submit" value="submit">
+</form>
+<a th:href="@{/hello?username=admin}">hello3 - params屬性</a><br>
+<a th:href="@{/hello(username='admin')}">hello4 - params屬性</a><br>
+<a th:href="@{/aac/ant}">hello5 - ant屬性</a><br>
+<a th:href="@{/abc/te@@!@/ant}">hello6 - ant屬性</a><br>
+<a th:href="@{/abc/test/a1/a2/ant}">hello7 - ant屬性</a><br>
+<a th:href="@{/c5zzz/t1/t2/lkvqe23/ant}">hello8 - ant屬性</a><br>
+<a th:href="@{/test/rest/admin/1}">hello9 - 占位符屬性</a><br>
+
+<br>
+form1
+<form method="POST" th:action="@{/param/servletAPI}">
+    帳戶: <input type="text" name="username"><br>
+    密碼: <input type="password" name="password"><br>
+    <input type="submit" value="登陸">
+</form>
+form2: name 一致
+<form method="POST" th:action="@{/param}">
+    帳戶: <input type="text" name="username"><br>
+    密碼: <input type="password" name="password"><br>
+    <input type="submit" value="登陸">
+</form>
+form3: name 不一致 改用 RequestParam
+<form method="POST" th:action="@{/param}">
+    帳戶: <input type="text" name="userName"><br>
+    密碼: <input type="password" name="Password"><br>
+    <input type="submit" value="登陸">
+</form>
+
+<a th:href="@{/cookie}">hello10 - sessionid</a><br>
+<a th:href="@{/header}">hello11 - header</a><br>
+
+form4
+<form method="POST" th:action="@{/param/pojo}">
+    帳戶: <input type="text" name="username"><br>
+    密碼: <input type="password" name="password"><br>
+    <input type="submit" value="登陸">
+</form>
+
+<a th:href="@{/test/mav}">hello12 - model and view</a><br>
+<a th:href="@{/test/model}">hello13 - model</a><br>
+<a th:href="@{/test/modelMap}">hello14 - modelMap</a><br>
+<a th:href="@{/test/map}">hello15 - map</a><br>
+
+<a th:href="@{/test/session}">hello16 - session</a><br>
+<a th:href="@{/test/application}">hello17 - application</a><br>
+
+
+<a th:href="@{/test/view/thymeleaf}">hello18 - thymeleaf</a><br>
+<a th:href="@{/test/view/forward}">hello18 - forward</a><br>
+<a th:href="@{/test/view/redirect}">hello18 - redirect</a><br>
+
+</body>
+</html>

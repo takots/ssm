@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Example</title>
+</head>
+<body>
+index.html
+<a th:href="@{/user/1}">user id</a>
+form post:
+<form method="POST" th:action="@{/user}">
+    <input type="submit" value="insert">
+</form>
+form put:
+<form method="POST" th:action="@{/user}">
+    <input type="hidden" name="_method" value="put">
+    <input type="submit" value="update">
+</form>
+form delete:
+<form method="POST" th:action="@{/user/3}">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="delete">
+</form>
+
+<a th:href="@{/employee}">all employee</a>
+</body>
+</html>

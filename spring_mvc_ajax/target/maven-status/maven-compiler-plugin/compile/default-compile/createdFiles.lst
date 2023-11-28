@@ -1,0 +1,3 @@
+com\example\springmvc\pojo\User.class
+com\example\springmvc\controller\FileUpAndDownController.class
+com\example\springmvc\controller\TestAjaxController.class

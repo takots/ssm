@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+index.html
+<div id="app">
+    <input type="button" value="spring mvc ajax" @click="testAjax()"><br>
+    <input type="button" value="spring mvc ajax RequestBody" @click="testRequestBody()"><br>
+    <a th:href="@{/test/responseBody1}">/test/responseBody1</a><br>
+    <a th:href="@{/test/responseBody2}">/test/responseBody2</a><br>
+    <input type="button" value="spring mvc ajax ResponseBody user" @click="testResponseBody()"><br>
+    <input type="button" value="spring mvc ajax ResponseBody map" @click="testResponseBody2()"><br>
+    <input type="button" value="spring mvc ajax ResponseBody list" @click="testResponseBody3()"><br>
+    <a th:href="@{/test/down}">download images</a><br>
+</div>
+<script type="text/javascript">
+    /**
+     *
+         axios({
+            url:"",      // 請求路徑
+            method:"",   // 請求方式
+                         // name=value&name=value的方式發送的請求參數
+                         // 不管使用的請求方式是get 或post 請求參數都會被拼接到請求地址後
+                         // 此種方式的請求參數可以通過 request.getParameter() 獲取
+            param:{},
+            data:{}      // 以 json 格式發送的請求參數 請求參數會被保存到請求報文的請求體傳輸到服務器
+                         // 此種方式的請求參數不可以被request.getParameter()獲取
+         }).then(response=>{
+            console.log(response.data)
+         })
+     */
+    var vue = new Vue({
+        el: "#app",
+        methods:({
+            testAjax(){
+                axios.post(
+                    "/springMVC/test/ajax?id=1001",
+                    {username:"username",password:"password"}
+                ).then(response=>{
+                    console.log(response.data);
+                })
+            },
+            testRequestBody(){
+                axios.post(
+                    "/springMVC/test/requestBody/json",
+                    {username:"username",password:"password",age:23,gender:"m"}
+                ).then(response=>{
+                    console.log(response.data);
+                })
+            },
+            testResponseBody(){
+                axios.post("/springMVC/test/response/json").then(response=>{
+                    console.log(response.data);
+                })
+            },
+            testResponseBody2(){
+                axios.post("/springMVC/test/response/map").then(response=>{
+                    console.log(response.data);
+                })
+            },
+            testResponseBody3(){
+                axios.post("/springMVC/test/response/list").then(response=>{
+                    console.log(response.data);
+                })
+            }
+        })
+    })
+</script>
+</body>
+</html>

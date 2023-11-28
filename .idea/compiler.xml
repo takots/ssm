@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/spring_helloworld/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring_di/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring_ioc_annotation/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring_proxy/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring_aop/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/spring_transaction/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring_helloworld" />
+        <module name="spring_mvc_demo" />
+        <module name="spring_listener" />
+        <module name="spring_mvc_ajax" />
+        <module name="spring_mvc_helloworld" />
+        <module name="spring_mvc_annotation" />
+        <module name="spring_mvc_rest" />
+        <module name="spring_transaction" />
+        <module name="spring_mvc_handlerExceptionResolver" />
+        <module name="spring_mvc_extension" />
+        <module name="spring_proxy" />
+        <module name="spring_ioc_annotation" />
+        <module name="spring_ioc_xml" />
+        <module name="spring_aop" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mybatis_parameter" target="1.8" />
+      <module name="spring-proxy" target="1.7" />
+      <module name="spring_di" target="1.7" />
+      <module name="spring_helloworld (1)" target="1.8" />
+      <module name="spring_helloworld (2)" target="1.8" />
+      <module name="spring_ioc_xml (1)" target="1.8" />
+      <module name="spring_ioc_xml (2)" target="1.8" />
+      <module name="spring_ioc_xml (3)" target="1.8" />
+      <module name="spring_mvc_helloworld (1)" target="1.7" />
+      <module name="spring_mvc_helloworld (2)" target="1.7" />
+      <module name="spring_proxy (1)" target="1.8" />
+      <module name="spring_proxy (2)" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>employee_list</title>
+    <link rel="stylesheet" th:href="@{/static/css/employee_list.css}">
+</head>
+<body>
+<div id="app">
+    <table>
+        <tr>
+            <th>id</th>
+            <th>lastName</th>
+            <th>email</th>
+            <th>gender</th>
+            <th>options</th>
+            <th><a th:href="@{/to/add}">add</a></th>
+        </tr>
+        <tr th:each="employee:${allEmployee}">
+            <td th:text="${employee.id}"></td>
+            <td th:text="${employee.lastName}"></td>
+            <td th:text="${employee.email}"></td>
+            <td th:text="${employee.gender}"></td>
+            <td>
+                <a th:href="@{'/employee/'+${employee.id}}">update</a>
+                <a @click="deleteEmployee()" th:href="@{'/employee/'+${employee.id}}">delete</a>
+            </td>
+        </tr>
+    </table>
+</div>
+<form method="post">
+    <input type="hidden" name="_method" value="delete">
+</form>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<!--<script type="text/javascript" th:href="@{/static/js/vue.js}"></script>-->
+<script type="text/javascript">
+    var vue = new Vue({
+        el: "#app",
+        methods:{
+            deleteEmployee(){
+                // 獲取form 表單
+                var form = document.getElementsByTagName("form")[0];
+                // 把當前點到的a連結的href賦值給action
+                form.action = event.target.href;
+                form.submit();
+                // 阻止delete a連結的默認行為
+                event.preventDefault();
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+/* 標題行 (th) 样式 */
+th {
+  background-color: #3498db; /* 背景色 */
+  color: #fff; /* 文本颜色 */
+  padding: 10px; /* 內邊距 */
+}
+
+/* 奇數行 (tr) 样式 */
+tr:nth-child(odd) {
+  background-color: #f2f2f2; /* 背景色 */
+}
+
+/* 偶數行 (tr) 样式 */
+tr:nth-child(even) {
+  background-color: #fff; /* 背景色 */
+}
+
+/* 數據單元格 (td) 样式 */
+td {
+  padding: 5px; /* 內邊距 */
+  border: 1px solid #ccc; /* 邊框 */
+}

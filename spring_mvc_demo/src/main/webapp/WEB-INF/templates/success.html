@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Example</title>
+</head>
+<body>
+success
+<div th:text="${testRequestScope}"></div>
+<div th:text="${session.testSessionScope}"></div>
+<div th:text="${application.testApplicationScope}"></div>
+</body>
+</html>

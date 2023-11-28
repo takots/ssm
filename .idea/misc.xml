@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/spring_helloworld/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_ioc_xml/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_di/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_ioc_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_aop/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_transaction/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_mvc_helloworld/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_mvc_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_mvc_rest/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_mvc_ajax/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_mvc_extension/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_mvc_handlerExceptionResolver/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_mvc_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_listener/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
