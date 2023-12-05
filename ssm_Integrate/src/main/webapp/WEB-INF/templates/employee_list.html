@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:include="links-fragment :: linkContent"></div>
+</head>
+<body>
+<!-- [ Preloader ] Start -->
+<div class="page-loader">
+    <div class="bg-primary"></div>
+</div>
+<!-- [ Preloader ] End -->
+<!-- [ Layout wrapper ] Start -->
+<div class="layout-wrapper layout-2">
+    <div class="layout-inner">
+
+        <!-- [ Layout sidenav ] Start -->
+        <div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-dark">
+            <div th:include="layout-sidenav :: sidenavbodyContent"></div>
+        </div>
+        <!-- [ Layout sidenav ] End -->
+
+        <!-- [ Layout container ] Start -->
+        <div class="layout-container">
+            <div th:include="layout-navbar :: navbarbodyContent"></div>
+            <!-- [ Layout content ] Start -->
+            <div class="layout-content">
+
+                <style>
+                    .card.table-hover tbody tr:hover {
+                      background-color: #dcdcdc;
+                    }
+                </style>
+                <div class="card table-hover">
+                    <table class="table card-table">
+                        <thead class="thead-light">
+                        <tr>
+                            <th>#</th>
+                            <th>員工姓名</th>
+                            <th>年齡</th>
+                            <th>性別</th>
+                            <th>郵箱</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="employee ,status :${list}">
+                            <td th:text="${status.count}"></td>
+                            <td th:text="${employee.empName}"></td>
+                            <td th:text="${employee.age}"></td>
+                            <td th:text="${employee.gender}"></td>
+                            <td th:text="${employee.email}"></td>
+                            <td>
+                                <a th:href="@{/employee}" class="badge badge-primary">修改</a>
+                                <a th:href="@{/employee}" class="badge badge-danger">刪除</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- [ Layout footer ] Start -->
+                <div th:include="layout-footer :: footerbodyContent"></div>
+                <!-- [ Layout footer ] End -->
+            </div>
+            <!-- [ Layout content ] End -->
+        </div>
+        <!-- [ Layout container ] End -->
+
+    </div>
+    <!-- Overlay -->
+    <div class="layout-overlay layout-sidenav-toggle"></div>
+</div>
+<!-- [ Layout wrapper] End -->
+
+<div th:include="script-fragment :: scriptContent"></div>
+</body>
+</html>

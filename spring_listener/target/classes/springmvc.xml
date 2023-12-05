@@ -7,8 +7,8 @@
                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
                            http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-<!--    掃描控制層組件-->
-    <context:component-scan base-package="com.example" />
+    <!-- 掃描控制層組件-->
+    <context:component-scan base-package="com.example.controller" />
 
     <!-- 配置Thymeleaf视图解析器 -->
     <bean id="viewResolver"

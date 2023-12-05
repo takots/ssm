@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bhumlu | B4+ admin template by Srthemesvilla</title>
+    <div th:include="links-fragment :: linkContent"></div>
+</head>
+
+<body>
+<!-- [ Preloader ] Start -->
+<div class="page-loader">
+    <div class="bg-primary"></div>
+</div>
+<!-- [ Preloader ] End -->
+
+
+<!-- [ Layout wrapper ] Start -->
+<div class="layout-wrapper layout-2">
+    <div class="layout-inner">
+        <!-- [ Layout sidenav ] Start -->
+        <div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-dark">
+            <div th:include="layout-sidenav :: sidenavbodyContent"></div>
+        </div>
+        <!-- [ Layout sidenav ] End -->
+        <!-- [ Layout container ] Start -->
+        <div class="layout-container">
+            <!-- [ Layout navbar ( Header ) ] Start -->
+
+            <!-- [ Layout navbar ( Header ) ] End -->
+
+            <!-- [ Layout content ] Start -->
+            <div class="layout-content iframeDiv">
+                <!-- [ content ] Start -->
+
+                <!-- [ content ] End -->
+
+                <!-- [ Layout footer ] Start -->
+
+                <!-- [ Layout footer ] End -->
+            </div>
+            <!-- [ Layout content ] Start -->
+        </div>
+        <!-- [ Layout container ] End -->
+    </div>
+    <!-- Overlay -->
+    <div class="layout-overlay layout-sidenav-toggle"></div>
+</div>
+<!-- [ Layout wrapper] End -->
+
+<div th:include="script-fragment :: scriptContent"></div>
+</body>
+
+</html>
