@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:include="links-fragment :: linkContent"></div>
+</head>
+<body>
+<!-- [ Preloader ] Start -->
+<div class="page-loader">
+    <div class="bg-primary"></div>
+</div>
+<!-- [ Preloader ] End -->
+<!-- [ Layout wrapper ] Start -->
+<div class="layout-wrapper layout-2">
+    <div class="layout-inner">
+
+        <!-- [ Layout sidenav ] Start -->
+        <div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-dark">
+            <div th:include="layout-sidenav :: sidenavbodyContent"></div>
+        </div>
+        <!-- [ Layout sidenav ] End -->
+
+        <!-- [ Layout container ] Start -->
+        <div class="layout-container">
+            <div th:include="layout-navbar :: navbarbodyContent"></div>
+            <!-- [ Layout content ] Start -->
+            <div class="layout-content">
+                <div class="container-fluid flex-grow-1 container-p-y">
+                    <h4 class="font-weight-bold py-3 mb-0">新增員工</h4>
+                    <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item">員工管理</li>
+                            <li class="breadcrumb-item active">新增員工</li>
+                        </ol>
+                    </div>
+
+                    <div class="card mb-4">
+                        <h6 class="card-header">員工資訊</h6>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">姓名</label>
+                                    <div class="col-sm-8">
+                                        <input name="customername" type="text" class="form-control" placeholder="請輸入姓名">
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-sm-2 text-sm-right pt-sm-0">性別</label>
+                                    <div class="col-sm-8">
+                                        <label class="custom-control custom-radio custom-control-inline">
+                                            <input name="custom-radio-3" type="radio" class="custom-control-input" checked>
+                                            <span class="custom-control-label">男</span>
+                                        </label>
+                                        <label class="custom-control custom-radio custom-control-inline">
+                                            <input name="custom-radio-3" type="radio" class="custom-control-input">
+                                            <span class="custom-control-label">女</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">電話</label>
+                                    <div class="col-sm-2">
+                                        <input name="customertel" type="tel" class="form-control" placeholder="請輸入電話">
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <label class="col-form-label col-sm-1 text-sm-right">手機</label>
+                                    <div class="col-sm-5">
+                                        <input name="customercellphone" type="tel" class="form-control" placeholder="請輸入手機">
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">Email</label>
+                                    <div class="col-sm-8">
+                                        <input name="customeremail" type="email" class="form-control" placeholder="請輸入Email">
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">住址</label>
+                                    <div class="input-group col-sm-1">
+                                        <select class="custom-select" id="city" onchange="updateDistricts()">
+                                            <option value="">請選擇城市</option>
+                                            <option value="taipei">台北市</option>
+                                            <option value="newtaipei">新北市</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group col-sm-1">
+                                        <select class="custom-select" id="district">
+                                            <option>請選擇區域</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input name="customeraddress" type="text" class="form-control" placeholder="請輸入住址">
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">備註</label>
+                                    <div class="col-sm-8">
+                                        <textarea name="customerbackup" class="form-control" placeholder="請輸入備註"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 ml-sm-auto">
+                                        <button type="submit" class="btn btn-primary">確認送出</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- [ Layout footer ] Start -->
+                <div th:include="layout-footer :: footerbodyContent"></div>
+                <!-- [ Layout footer ] End -->
+            </div>
+            <!-- [ Layout content ] End -->
+        </div>
+        <!-- [ Layout container ] End -->
+
+    </div>
+    <!-- Overlay -->
+    <div class="layout-overlay layout-sidenav-toggle"></div>
+</div>
+<!-- [ Layout wrapper] End -->
+
+<div th:include="script-fragment :: scriptContent"></div>
+</body>
+</html>
